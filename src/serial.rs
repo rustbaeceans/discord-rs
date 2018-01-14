@@ -42,7 +42,7 @@ pub fn deserialize_id<'d, D: Deserializer<'d>>(d: D) -> Result<u64, D::Error> {
 		}
 	}
 
-	d.deserialize_u64(IdVisitor)
+	d.deserialize_any(IdVisitor)
 }
 
 /// Deserialize a maybe-string discriminator into a u16.
